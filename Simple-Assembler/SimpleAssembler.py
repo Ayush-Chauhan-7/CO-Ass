@@ -82,6 +82,9 @@ def representsInteger(str):
 
 def ErrorGenerator():
     hflag = 0
+    if totalCommands-varnum > 256:
+        print("Error : The assembler can't produce more than 256 lines of output")
+        exit()
     for i in commandlist:
         command = i[1]
         if command not in instructions:
